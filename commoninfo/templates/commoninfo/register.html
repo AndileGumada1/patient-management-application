@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <title>registration</title>
+</head>
+<div class="row mb-3" >
+    
+<body>
+
+    <div class="panel-heading" align="content">
+            <h1>Registration Page</h1>    
+    </div>
+    <form action="add" method="post">
+            {%csrf_token %}
+        {% if messages %}
+        {% for message in messages %}
+        <p class="alert alert-info">{{ message }}</p>
+
+        {% endfor %}
+        {% endif %}
+        <div class="form-group">
+        <input type="text" name="username" placeholder="Username" class="form-control input-sm"><br>
+        </div>
+
+        <div class="form-group">
+        <input type="text" name="email" id="email" placeholder="Email address" class="form-control input-sm"><br>
+        </div>
+
+        <div class="form-group">
+        <input type="text" name="password1" placeholder="password" class="form-control input-sm"><br>
+        </div>
+
+        <div class="form-group">
+        <input type="text" name="password2" placeholder="Re-enter password" class="form-control input-sm"><br>
+
+        <div class="form-group">
+        <input type="text" name="firstname" placeholder="First Name" class="form-control input-sm"><br>
+
+        <div class="form-group">
+        <input type="text" name="lastname" placeholder="Last Name" class="form-control input-sm"><br>
+        </div>
+
+        <div class="form-group">
+        <input type="text" name="uniqueid" placeholder="Unique ID" class="form-control input-sm"><br>
+        </div>
+
+        <div class="form-group">
+        <input type="text" name="dateofbirth" placeholder=" Date OF Birth" class="form-control input-sm"><br>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+
+    </body>
+</div>
+</html>
